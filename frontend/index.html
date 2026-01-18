@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Based Smart Monitoring System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <section class="header-section">
+            <div class="header-content">
+                <h1><i class="fas fa-cloud-signal"></i> Cloud-Based Smart Monitoring System</h1>
+                <p class="subtitle">Azure Fundamentals Project - Real-time Data Collection & Monitoring</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Data Entry Card -->
+                <div class="main-card">
+                    <div class="card-header">
+                        <h1><i class="fas fa-database"></i> Sensor Data Submission</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-container">
+                            <form id="dataForm">
+                                <div class="form-group">
+                                    <label for="sensorType" class="form-label">
+                                        <i class="fas fa-microchip"></i> Sensor Type
+                                    </label>
+                                    <select class="form-select form-input" id="sensorType" required>
+                                        <option value="">Select Sensor Type</option>
+                                        <option value="aqi">Air Quality Index (AQI)</option>
+                                        <option value="temperature">Temperature (°C)</option>
+                                        <option value="humidity">Humidity (%)</option>
+                                        <option value="pressure">Pressure (hPa)</option>
+                                        <option value="light">Light Intensity (Lux)</option>
+                                        <option value="motion">Motion Detection</option>
+                                        <option value="sound">Sound Level (dB)</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="value" class="form-label">
+                                        <i class="fas fa-ruler-vertical"></i> Value
+                                    </label>
+                                    <input type="number" class="form-input" id="value" placeholder="Enter sensor value" step="any" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="location" class="form-label">
+                                        <i class="fas fa-map-marker-alt"></i> Location
+                                    </label>
+                                    <input type="text" class="form-input" id="location" placeholder="Enter location (e.g., Building A, Room 101)" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="description" class="form-label">
+                                        <i class="fas fa-sticky-note"></i> Description
+                                    </label>
+                                    <textarea class="form-input" id="description" rows="3" placeholder="Enter additional details about the reading"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="form-button" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> Submit Data to Azure Cloud
+                                </button>
+                            </form>
+                            
+                            <div id="result" class="result-container result-success">
+                                <div class="result-content">
+                                    <div class="result-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h3 class="result-title">Data Submitted Successfully!</h3>
+                                    <p class="result-message">Your sensor data has been securely stored in Azure cloud storage.</p>
+                                    <p class="result-timestamp" id="timestamp"></p>
+                                </div>
+                            </div>
+                            
+                            <div id="error" class="result-container result-error">
+                                <div class="result-content">
+                                    <div class="result-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3 class="result-title">Submission Error</h3>
+                                    <p class="result-message" id="errorMessage"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Azure Services Section -->
+                <section class="services-section">
+                    <h3><i class="fas fa-server"></i> Azure Services Utilized</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-window-maximize"></i>
+                            </div>
+                            <h5>Azure App Service</h5>
+                            <p>Global Application Hosting</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h5>Storage Account</h5>
+                            <p>Secure Data Storage</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5>Application Insights</h5>
+                            <p>Advanced Monitoring</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h5>Azure Monitor</h5>
+                            <p>Performance Tracking</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Active Directory</h5>
+                            <p>Identity Management</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fas fa-object-group"></i>
+                            </div>
+                            <h5>Resource Group</h5>
+                            <p>Resource Organization</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Cloud-Based Smart Monitoring System • Azure Fundamentals Project • <span id="currentYear"></span></p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

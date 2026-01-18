@@ -1,0 +1,11 @@
+node_modules/
+.env
+dist/
+build/
+.nyc_output/
+coverage/
+*.log
+.DS_Store
+.vscode/
+screenshots/*.png
+PPT/*.pptx

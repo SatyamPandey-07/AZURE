@@ -1,0 +1,30 @@
+{
+  "name": "cloud-smart-monitoring",
+  "version": "1.0.0",
+  "description": "A cloud-based smart monitoring system using Microsoft Azure",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "azure",
+    "monitoring",
+    "cloud",
+    "iot",
+    "sensor-data"
+  ],
+  "author": "Azure Fundamentals Intern",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/data-tables": "^13.2.2",
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
