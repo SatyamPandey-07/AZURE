@@ -158,7 +158,6 @@ app.get('/health', (req, res) => {
     });
 });
 
-// Initialize the table and start server
 initializeTable().then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
