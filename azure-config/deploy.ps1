@@ -15,7 +15,7 @@ param(
 )
 
 # Login to Azure (uncomment if needed)
-# Connect-AzAccount
+
 
 Write-Host "Starting deployment of Cloud-Based Smart Monitoring System..." -ForegroundColor Green
 
