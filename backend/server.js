@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // In-memory storage for development (will use Azure Table Storage in production)
 let sensorData = [];
 
-// Azure Storage configuration
+
 const AZURE_STORAGE_ACCOUNT_NAME = process.env.AZURE_STORAGE_ACCOUNT_NAME;
 const AZURE_STORAGE_ACCESS_KEY = process.env.AZURE_STORAGE_ACCESS_KEY;
 const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
